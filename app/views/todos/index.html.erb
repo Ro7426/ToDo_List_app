@@ -17,7 +17,9 @@
 
     <div>
 
-    <%= link_to "Marcar Tarea Completada", completed_path(todo), class: "btn btn-primary"  %>
+    <%= link_to 'completed', complete_path(todo), method: :complete, class: "btn btn-primary"  %>
+
+    
     
 
     <%= link_to "Mostrar Tarea", todo, class:"btn btn-success"  %>

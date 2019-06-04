@@ -8,8 +8,10 @@ get 'todos/:id', to: 'todos#show', as:'todo'
 get 'todos/:id/edit', to: 'todos#edit', as:'edit'
 patch 'todos/:id', to: 'todos#update'
 delete 'todos/:id', to: 'todos#destroy'
-get 'todos/:id/complete', to: 'todos#complete', as: 'completed'
+post 'todos/:id/complete', to: 'todos#complete', as: 'complete'
 root 'todos#index'
+
+
 
 
 
