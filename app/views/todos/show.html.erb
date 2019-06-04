@@ -1,12 +1,14 @@
-<%= link_to "back", todos_path  %>
+
 
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    <h5 class="card-title">Descripcion Tarea</h5>
     <p class="card-text"><%= @todo.description %></p>
     <p class="card-text"><%= @todo.completed %></p>
   
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    
+<%= link_to "REGRESAR", todos_path  %>
+    
 
    
   </div>

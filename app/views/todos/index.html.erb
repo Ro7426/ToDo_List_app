@@ -9,19 +9,28 @@
 <% @todos.each do |todo| %>
 
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 50rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    <h5 class="card-title">DESCRIPCION TAREA</h5>
     <p class="card-text"><%= todo.description %></p>
     <p class="card-text"><%= todo.completed %></p>
 
-    <%= link_to "complete", completed_path(todo) %>
+    <div>
 
-    <%= link_to "show", todo %>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <%= link_to "Marcar Tarea Completada", completed_path(todo), class: "btn btn-primary"  %>
+    
 
-    <%= link_to "Go to Edit", edit_path(todo)  %>
-    <%= link_to "Go to destroy", todo, method: :delete %>
+    <%= link_to "Mostrar Tarea", todo, class:"btn btn-success"  %>
+    
+
+    <%= link_to "EDITAR TAREA", edit_path(todo), class:"btn btn-info"  %>
+
+    <%= link_to "ELIMINAR TAREA", todo, method: :delete, class:"btn btn-danger" %>
+   
+    </div>
+
+
+   
   </div>
 </div>
 

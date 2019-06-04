@@ -1,12 +1,12 @@
-<h1>vista new</h1>
+<h1>CREAR NUEVA TAREA</h1>
 
 <%= link_to "back", todos_path  %>
 
 
 <%= form_with(model: @todo, local: true) do |f|%>
-<%= f.label :description, 'desc' %>
+<%= f.label :description, 'Descripcion Tarea' %>
 <%= f.text_field :description %>
-<%= f.label :completed,'holi' %>
+<%= f.label :completed,'Check' %>
 <%= f.check_box :completed %>
 
 <%= f.submit :create %>
