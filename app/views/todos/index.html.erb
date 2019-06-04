@@ -1,0 +1,33 @@
+<h1>index</h1>
+<%= link_to "create ToDo", todos_new_path  %>
+
+
+
+<%= link_to "Listar",  todos_list_path %>
+
+
+<% @todos.each do |todo| %>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text"><%= todo.description %></p>
+    <p class="card-text"><%= todo.completed %></p>
+
+    <%= link_to "complete", completed_path(todo) %>
+
+    <%= link_to "show", todo %>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    <%= link_to "Go to Edit", edit_path(todo)  %>
+    <%= link_to "Go to destroy", todo, method: :delete %>
+  </div>
+</div>
+
+
+
+
+    
+    
+<% end %>

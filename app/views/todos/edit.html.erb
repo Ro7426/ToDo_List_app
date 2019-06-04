@@ -1,0 +1,11 @@
+<h1>vista edit</h1>
+
+
+<%= form_with(model: @todo, local: true) do |f|%>
+<%= f.label :description, 'description' %>
+<%= f.text_field :description %>
+<%= f.label :completed,'check' %>
+<%= f.check_box :completed %>
+
+<%= f.submit :create %>
+<% end %>
